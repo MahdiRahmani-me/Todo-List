@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/syles/style.css" />
+    <link rel="stylesheet" href="./src/syles/modal.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <header>
+      <h1>کار های روزانه&ThinSpace;م</h1>
+    </header>
+
+    <section class="container">
+      <div class="form-container">
+        <form class="todo-form">
+          <input type="text" class="todo-input" />
+          <button class="add-todo" type="submit">
+            <i class="fas fa-plus-circle"></i>
+          </button>
+        </form>
+        <div class="select">
+          <select name="todos" class="filter-todos">
+            <option value="all">همه</option>
+            <option value="completed">تکمیل شده</option>
+            <option value="uncompleted">تکمیل نشده</option>
+          </select>
+        </div>
+      </div>
+      <div class="todo-container">
+        <ul class="todolist">
+          <!-- <li class="todo">
+            <p class="todo__title">todo #1</p>
+            <span class="todo_createdAt">1402/1/28</span>
+            <button><i class="todo__check far fa-check-square"></i></button>
+            <button><i class="todo__remove far fa-trash-alt"></i></button>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+    <div class="backdrop hidden" dir="rtl">
+      <div class="modal">
+        <div class="modal__header">
+          <p>ویرایش Todo</p>
+          <button class="close-modal">❌</button>
+        </div>
+        <div class="modal__content">
+          <label for="edit-todo">عنوان</label>
+          <input type="text" name="edit-todo" id="edit-todo" />
+        </div>
+        <div class="modal__actions">
+          <button class="btn btn--primary close-modal" id="update-todo">
+            تایید
+          </button>
+          <button class="btn btn--outline close-modal">انصراف</button>
+        </div>
+      </div>
+    </div>
+    <script src="/src/js/todolist.js"></script>
+    <script src="/src/js/modal.js"></script>
+  </body>
+</html>
